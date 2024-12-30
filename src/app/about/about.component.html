@@ -1,0 +1,15 @@
+<div>
+  <h2>About</h2>
+  <button (click)="goHome()">retour à L'accueil</button>
+    <button (click)="changeVisibility()">voir ou cacher la liste des formation</button>
+    <ul *ngIf="visible">
+      <li *ngFor="let formation of formations">
+        <a [routerLink]="['/recuperation',formation]">{{formation}}</a>
+
+      </li>
+
+    </ul>
+    <br>
+
+
+</div>

@@ -1,0 +1,30 @@
+<div>
+  <h2>Liste des intervenant:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Age</th>
+        <th>formation</th>
+        <th>Grade</th>
+
+
+
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let intervenant of intervenants; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{intervenant.nom}}</td>
+        <td>{{intervenant.prenom}}</td>
+        <td>{{intervenant.age}}</td>
+        <td>{{intervenant.formation}}</td>
+        <!-- class speaker si intervenant.grade== speaker class candidat si intervenant.grade== candidat-->
+        <td [ngClass]="{'speaker': intervenant.grade == 'speaker', 'candidat': intervenant.grade == 'candidat'}">{{intervenant.grade}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
