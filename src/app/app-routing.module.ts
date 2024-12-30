@@ -11,8 +11,11 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'list',component:ListComponent},
-  {path:'recuperation/:formation',component:RecupComponent},
-  {path:'**',component:UnfoundComponent}
+  //routage paramétré
+  {path:'recuperation/:formation',component:RecupComponent}, //formation est un paramétre
+
+  {path:'**',component:UnfoundComponent} // les éléments au dessous de ce routage ne seront pas pris en compte
+  //DRY : Don't Repeat Yourself
 
 ];
 
